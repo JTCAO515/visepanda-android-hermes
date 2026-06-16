@@ -10,6 +10,9 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.Callback
+import okhttp3.Call
+import okhttp3.Response
 import space.jtcao.visepanda.data.model.ChatEvent
 import space.jtcao.visepanda.data.model.ChatFaq
 import space.jtcao.visepanda.data.model.ChatImage
