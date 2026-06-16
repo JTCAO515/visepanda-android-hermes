@@ -6,7 +6,7 @@ package space.jtcao.visepanda.data.api
  */
 object ApiConfig {
     /** Production API base URL (Vercel) */
-    const val BASE_URL = "https://go2china.space"
+    const val BASE_URL = "https://www.go2china.space"
 
     /** Request timeout in seconds */
     const val TIMEOUT_SECONDS = 30L
