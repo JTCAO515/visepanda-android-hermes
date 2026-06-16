@@ -183,7 +183,7 @@ private fun CityInfoPopup(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
-                text = city.nameCn,
+                text = city.name,
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold
             )

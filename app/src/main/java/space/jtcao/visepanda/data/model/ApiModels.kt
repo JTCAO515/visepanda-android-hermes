@@ -17,6 +17,8 @@ data class MapMarker(
     val name: String = "",
     val lat: Double = 0.0,
     val lng: Double = 0.0,
+    val vibe: String = "",
+    val days: String = "",
 )
 
 /**

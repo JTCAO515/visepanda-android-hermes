@@ -64,6 +64,7 @@ fun HomeScreen(
         is HomeUiState.Success -> HomeContent(
             topCities = state.cities.take(8),
             onCityClick = onCityClick,
+            onViewAllCities = onViewAllCities,
             onStartChat = onStartChat,
             onRefresh = { viewModel.loadCities() }
         )
@@ -78,6 +79,7 @@ fun HomeScreen(
 private fun HomeContent(
     topCities: List<Pair<String, City>>,
     onCityClick: (String) -> Unit,
+    onViewAllCities: () -> Unit,
     onStartChat: () -> Unit,
     onRefresh: () -> Unit
 ) {

@@ -189,7 +189,7 @@ class ChatViewModel(application: Application) : AndroidViewModel(application) {
                 tripRepo.saveTrip(
                     name = text.take(50).replace("
 ", " ").trim(),
-                    itinerary = text
+                    content = text
                 )
             } catch (_: Exception) { /* Best-effort save */ }
         }

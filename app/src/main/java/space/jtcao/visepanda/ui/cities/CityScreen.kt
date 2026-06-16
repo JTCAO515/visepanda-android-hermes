@@ -224,7 +224,7 @@ fun CityDetailScreen(
             is CityDetailUiState.Loading -> Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
                 Text("🐼 Loading...", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
-            is CityDetailUiState.Success -> CityDetailContent(state.detail, state.cityName, Modifier.padding(padding))
+            is CityDetailUiState.Success -> CityDetailContent(onStartChat = onStartChat, detail = state.detail, cityName = state.cityName, modifier = Modifier.padding(padding))
             is CityDetailUiState.Error -> Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(state.message, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error)
@@ -238,6 +238,7 @@ fun CityDetailScreen(
 
 @Composable
 private fun CityDetailContent(
+    onStartChat: (String) -> Unit = {},
     detail: CityDetail,
     cityName: String,
     modifier: Modifier = Modifier

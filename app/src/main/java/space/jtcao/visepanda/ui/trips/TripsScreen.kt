@@ -46,7 +46,7 @@ fun TripsScreen(
         is TripsUiState.Loading -> LoadingTrips()
         is TripsUiState.Success -> {
             if (state.trips.isEmpty()) {
-                EmptyTrips()
+                EmptyTrips(onStartChat = onStartChat)
             } else {
                 TripList(
                     trips = state.trips,
@@ -176,7 +176,7 @@ private fun TripCard(
 }
 
 @Composable
-private fun EmptyTrips() {
+private fun EmptyTrips(onStartChat = onStartChat) {
     Column(
         modifier = Modifier
             .fillMaxSize()
