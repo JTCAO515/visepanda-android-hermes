@@ -187,9 +187,10 @@ class ChatViewModel(application: Application) : AndroidViewModel(application) {
         kotlinx.coroutines.MainScope().launch {
             try {
                 tripRepo.saveTrip(
-                    name = text.take(50).replace("
-", " ").trim(),
-                    content = text
+                    space.jtcao.visepanda.data.model.Trip(
+                        title = text.take(50).replace("\n", " ").trim(),
+                        content = text
+                    )
                 )
             } catch (_: Exception) { /* Best-effort save */ }
         }

@@ -176,7 +176,7 @@ private fun TripCard(
 }
 
 @Composable
-private fun EmptyTrips(onStartChat = onStartChat) {
+private fun EmptyTrips(onStartChat: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
